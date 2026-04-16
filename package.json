@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Angel Points System Root Deployment",
   "scripts": {
-    "build": "npm --prefix frontend install && npm --prefix frontend run build && npm --prefix backend install",
+    "build": "rm -rf backend/node_modules && npm --prefix frontend install && npm --prefix frontend run build && npm --prefix backend install",
     "start": "node backend/server.js"
   },
   "engines": {
