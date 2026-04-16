@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api';
+const API_URL = 'https://38angel.zeabur.app/api';
 
 export const request = async (endpoint: string, options: RequestInit = {}) => {
   const token = localStorage.getItem('token');
