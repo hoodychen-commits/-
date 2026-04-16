@@ -279,7 +279,8 @@ app.get('/api/admin/products', authenticateToken, requireAdmin, (req, res) => {
 // Serve Static React Frontend
 app.use(express.static(path.join(__dirname, '../frontend/dist')));
 
-app.get('/*', (req, res) => {
+// 修正後的前端路由（不會報錯）
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/dist', 'index.html'));
 });
 
